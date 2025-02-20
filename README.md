@@ -2,11 +2,8 @@
 
 QEMU-based multi-architecture MemorySanitizer (QMSan) is a solution to detect Use-of-Uninitialized Memory (UUM) errors. Currently, it supports both amd64 and aarch64 architectures.
 
-## Prerequisites
-Work in progress
-
 ## Installation
-To install qmsan, start by cloning the repository
+To install QMSan, start by cloning the repository
 ```console
 git clone --recursive https://github.com/Heinzeen/qmsan.git
 ```
@@ -15,7 +12,7 @@ Then compile it using the building script with the appropriate flags
 python3 build.py [flags]
 ```
 ### List of flags
-QMSAN supports many execution modes that will be passed as flags during the compilation process.
+QMSan supports many execution modes that will be passed as flags during the compilation process.
 | Flag | Description |
 | --- | ----------- |
 |  --afl | Fuzzing mode|
@@ -26,13 +23,20 @@ QMSAN supports many execution modes that will be passed as flags during the comp
 |  --cross CROSS | Cross C compiler for libqasan|
 |  --cxx CXX | C++ compiler (default clang++-8)|
 |  --debug | Compile debug libqasan|
-|  --light_no_lib | Use qmsan's lightwieght NO_LIB mode - track only stores in libraries (msan needed)|
+|  --light_no_lib | Use QMSan's lightwieght NO_LIB mode - track only stores in libraries (msan needed)|
 |  --msan | Use memory sanitizer|
-|  --mverbose | Make QMSAN's output (very) verbose; only inyended for aggressive debugging.|
-|  --no_lib | Use qmsan's NO_LIB mode (msan needed)|
-|  --taint | Use qmsan's shadow propagation (msan needed)|
+|  --mverbose | Make QMSan's output (very) verbose; only inyended for aggressive debugging.|
+|  --no_lib | Use QMSan's NO_LIB mode (msan needed)|
+|  --taint | Use QMSan's shadow propagation (msan needed)|
 
 By combining the various flags one can achieve different results. See below for intended combinations of flags.
+
+### Docker
+To ease deployment, we provide a working dockerfile inside the `Docker/` directory. Navigate and build a docker image with a command similar to
+```console
+cd Docker
+docker build . -t qmsan
+```
 
 ## Fuzzing with QMSan
 QMSan should be used to perform fuzz testing on binary software. To do so, one needs to build an opportunistic detector and have access to an accurate detector. To build QMSan's opportunistic detector, you can use these flags
