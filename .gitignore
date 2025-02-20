@@ -1,0 +1,9 @@
+.vscode/
+libclang_rt.asan-*.so
+qasan-qemu
+qasan-system
+qemu-x86_64
+libqasan.so
+libqasan/libqasan.so
+tests/*
+!*/tests/*.c

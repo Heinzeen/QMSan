@@ -1,0 +1,82 @@
+memccpy
+bcopy
+
+
+
+
+
+__libc_memalign(? we have other memalign)
+cfree (should not be used)
+mallinfo
+mallopt
+malloc_stats
+__strdup(? we have other strdup)
+gcvt
+strncat !!!
+
+INTERCEPTORS_STRTO(double, strtod, char)
+INTERCEPTORS_STRTO(float, strtof, char)
+INTERCEPTORS_STRTO(long double, strtold, char)
+INTERCEPTORS_STRTO_BASE(long, strtol, char)
+INTERCEPTORS_STRTO_BASE(long long, strtoll, char)
+INTERCEPTORS_STRTO_BASE(unsigned long, strtoul, char)
+INTERCEPTORS_STRTO_BASE(unsigned long long, strtoull, char)
+INTERCEPTORS_STRTO_BASE(u64, strtouq, char)
+
+INTERCEPTORS_STRTO(double, wcstod, wchar_t)
+INTERCEPTORS_STRTO(float, wcstof, wchar_t)
+INTERCEPTORS_STRTO(long double, wcstold, wchar_t)
+INTERCEPTORS_STRTO_BASE(long, wcstol, wchar_t)
+INTERCEPTORS_STRTO_BASE(long long, wcstoll, wchar_t)
+INTERCEPTORS_STRTO_BASE(unsigned long, wcstoul, wchar_t)
+INTERCEPTORS_STRTO_BASE(unsigned long long, wcstoull, wchar_t)
+
+vswprintf
+swprintf
+strftime
+wcsftime
+mbtowc
+mbrtowc
+wmemcpy
+wmempcpy
+wmemset
+wmemmove
+wcscmp
+gettimeofday
+fcvt
+getenv
+setenv
+putenv
+fstat (+ family)
+pipe
+pipe2
+socketpair
+fgets_unlocked
+getrlimit (+ family)
+prlimit
+prlimit64
+epoll_wait
+epoll_pwait
+
+reallocarray
+
+getrusage
+
+pthread_create
+pthread_key_create
+pthread_join
+tzset
+atexit
+
+fork
+forkpty
+openpty
+
+dladdr
+dlerror
+
+shmat
+
+dl_iterate_phdr
+wcsncpy
+wcschr
