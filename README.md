@@ -73,4 +73,18 @@ QEMU_LD_PREFIX=/usr/aarch64-linux-gnu ./qmsan application
 By setting the `QEMU_LD_PREFIX` env variable it is possible to perform cross-architecture fuzzing using the same command line as before.
 
 ## Paper
-QMSan will be presented at NDSS 2025. We will upload shortly information on how to cite our paper.
+
+If you use QMSan for your academic research, use the following citation:
+
++ Matteo Marini, Daniele Cono D'Elia, Mathias Payer, and Leonard Querzoni. “QMSan: Efficiently Detecting Uninitialized Memory Errors During Fuzzing”. In Network and Distributed System Security Symposium (NDSS). 2025.
+
+Bibtex:
+
+```bibtex
+@INPROCEEDINGS{QMSan-NDSS2025,
+  title={{QMSan}: Efficiently Detecting Uninitialized Memory Errors During Fuzzing},
+  author={Marini, Matteo and D’Elia, Daniele Cono and Payer, Mathias and Querzoni, Leonardo},
+  booktitle={Network and Distributed System Security Symposium (NDSS)},
+  year={2025}
+}
+```
