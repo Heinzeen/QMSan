@@ -650,7 +650,9 @@ target_long qasan_actions_dispatcher(void *cpu_env,
         //adding cases for QMSAN.
 
         case QMSAN_ACTION_SET_MAIN:
-          //fprintf(stderr, "main at %lx\n", arg1 - load_addr);
+#ifdef MSAN_TAINT_ANALYSIS
+          fprintf(stderr, "[QMSan]main at %lx\n", arg1 - load_addr);
+#endif
           qmsan_start = 1;
           qmsan_ptr_main = (uint64_t) arg1;
 #ifdef TARGET_ARM
