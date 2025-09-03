@@ -88,6 +88,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                                                                         \
   })
 
+  //TODO: should we only use ASSERT_DLSYM?
 
 #define REAL(fun) \
   if(!ptr_##fun){\

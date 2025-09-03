@@ -962,7 +962,8 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
   void *rtv = __builtin_return_address(0);
   //fprintf(stderr, "[%p]creating thread at address %p\n", rtv, start_routine);
   
-  REAL(pthread_create);
+  ptr_pthread_create = ASSERT_DLSYM(pthread_create);
+  //REAL(pthread_create);
   struct wrapper_arg * a = (struct wrapper_arg *) malloc(sizeof(struct wrapper_arg));
   a->start_routine = start_routine;
   a->args = arg;
