@@ -80,15 +80,15 @@ By setting the `QEMU_LD_PREFIX` env variable it is possible to perform cross-arc
 
 If you use QMSan for your academic research, use the following citation:
 
-+ Matteo Marini, Daniele Cono D'Elia, Mathias Payer, and Leonard Querzoni. “QMSan: Efficiently Detecting Uninitialized Memory Errors During Fuzzing”. In Network and Distributed System Security Symposium (NDSS). 2025.
++ Marini, Matteo, Daniele Cono D’Elia, Mathias Payer, and Leonardo Querzoni. "QMSan: Efficiently Detecting Uninitialized Memory Errors During Fuzzing." In Proceedings of the Network and Distributed System Security (NDSS) Symposium 2025. 2025.
 
 Bibtex:
 
 ```bibtex
-@INPROCEEDINGS{QMSan-NDSS2025,
-  title={{QMSan}: Efficiently Detecting Uninitialized Memory Errors During Fuzzing},
-  author={Marini, Matteo and D’Elia, Daniele Cono and Payer, Mathias and Querzoni, Leonardo},
-  booktitle={Network and Distributed System Security Symposium (NDSS)},
+@inproceedings{marini2025qmsan,
+  title={QMSan: Efficiently Detecting Uninitialized Memory Errors During Fuzzing},
+  author={Marini, Matteo and D’Elia, Daniele Cono and Payer, Mathias and Querzoni, Leonardo and others},
+  booktitle={Proceedings of the Network and Distributed System Security (NDSS) Symposium 2025},
   year={2025}
 }
 ```
